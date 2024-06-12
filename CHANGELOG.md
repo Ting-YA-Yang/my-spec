@@ -1,6 +1,6 @@
-##  (2024-06-12)
+## <small>0.0.1 (2024-06-12)</small>
 
-* init lerna ([8d4b88a](https://github.com/Ting-YA-Yang/my-spec/commit/8d4b88a))
+* feature: init lerna ([0a941c8](https://github.com/Ting-YA-Yang/my-spec/commit/0a941c8))
 
 
 
