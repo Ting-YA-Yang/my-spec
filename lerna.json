@@ -2,7 +2,14 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "version": "0.0.1-y.0",
   "npmClient": "pnpm",
-  "packages": [
-    "packages/*"
-  ]
+  "command": {
+    "packages": [
+      "packages/*"
+    ],
+    "publish": {
+      "npmClient": "npm",
+      "message": "chore(release): publish %s",
+      "registry": "https://registry.npmjs.org"
+    }
+  }
 }
