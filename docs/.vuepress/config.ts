@@ -23,6 +23,7 @@ export default defineConfig({
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！'
   },
-  base: "https://ting-ya-yang.github.io/my-spec/",
-  title: "My Specific Site"
+  base: "/my-spec/",
+  title: "My Specific Site",
+  extraWatchFiles: ['.vuepress/config.ts'],  // 少了这个值部署之后的网站会失去css样式
 });
