@@ -14,14 +14,10 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
-       node-version: '16'
+       node-version: '18'
     - uses: pnpm/action-setup@v4
       with:
         version: 8
-    - name: Install dependencies
-      run: pnpm install
-    - name: Build
-      run: pnpm docs:build
 
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
@@ -29,5 +25,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TARGET_REPO: Ting-YA-Yang/my-spec
         TARGET_BRANCH: gh-actions
-        BUILD_SCRIPT: pnpm install && pnpm docs:build
+        BUILD_SCRIPT: npm i pnpm -g && pnpm install && pnpm docs:build
         BUILD_DIR: docs/.vuepress/dist
