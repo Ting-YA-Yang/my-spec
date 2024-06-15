@@ -16,13 +16,14 @@ jobs:
     - name: lock node version
       uses: actions/setup-node@v4
       with:
-          node-version: 18.20.0
+          node-version: '20'
+    
+    - name: pnpm install and build
+      run: npm i pnpm -g && pnpm install && pnpm docs:build
 
     - name: deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.3
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: Ting-YA-Yang/my-spec
-        TARGET_BRANCH: gh-actions
-        BUILD_SCRIPT: npm i pnpm -g && pnpm install && pnpm docs:build
-        BUILD_DIR: docs/.vuepress/dist
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        token: ${{ secrets.ACCESS_TOKEN }}
+        branch: gh-actions
+        folder: docs/.vuepress/dist
