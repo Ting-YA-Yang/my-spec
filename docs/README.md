@@ -1,6 +1,0 @@
-
-# Head  
-
-## Item  
-
-### Detail
