@@ -27,7 +27,7 @@ importers:
         specifier: ^0.34.0
         version: 0.34.0
       vuepress:
-        specifier: '1'
+        specifier: ^1.9.9
         version: 1.9.10
 
   packages/commitlint-config: {}
