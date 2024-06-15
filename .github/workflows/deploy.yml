@@ -10,13 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: checkout
+    - name: Checkout  ️
       uses: actions/checkout@v4
 
-    - name: lock node version
+    - name: lock npm version
       uses: actions/setup-node@v4
       with:
-          node-version: '20'
+          node-version: 16.18.0
+
+    - name: lock pnpm version
+      uses: pnpm/action-setup@v2.2.4
+      with:
+          version: 8.12.1
     
     - name: pnpm install and build
       run: npm i pnpm -g && pnpm install && pnpm docs:build
@@ -24,6 +29,6 @@ jobs:
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        token: ${{ secrets.ACCESS_TOKEN }}
+        access_token: ${{ secrets.ACCESS_TOKEN }}
         branch: gh-actions
         folder: docs/.vuepress/dist
