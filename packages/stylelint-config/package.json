@@ -1,9 +1,10 @@
 {
-  "name": "vicky-commitlint-config",
+  "name": "vicky-stylelint-config",
   "version": "0.0.1-y.2",
-  "description": "commitlint config",
-  "author": "vicky <yanghuiting2333@163.com>",
-  "homepage": "https://github.com/Ting-YA-Yang/my-spec#readme",
+  "description": "stylelint config",
+  "keywords": [
+    "stylelint"
+  ],
   "license": "ISC",
   "main": "index.js",
   "directories": {
@@ -14,20 +15,19 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ting-YA-Yang/my-spec.git"
   },
   "scripts": {
-    "test": "node ./__tests__/commitlint-config.test.js"
+    "test": "node ./__tests__/stylelint-config.test.js"
   },
   "bugs": {
     "url": "https://github.com/Ting-YA-Yang/my-spec/issues"
   },
-  "peerDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2"
+  "devDependencies": {
+    "stylelint": "^16.6.1"
   }
 }

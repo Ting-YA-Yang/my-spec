@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/Ting-YA-Yang/my-spec/issues"
+  },
+  "peerDependencies": {
+    "markdownlint": "^0.34.0"
   }
 }
