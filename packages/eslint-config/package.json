@@ -1,6 +1,6 @@
 {
   "name": "vicky-eslint-config",
-  "version": "0.0.1-y.2",
+  "version": "0.0.1-y.3",
   "description": "eslint config",
   "keywords": [
     "eslint"
@@ -28,8 +28,5 @@
   },
   "bugs": {
     "url": "https://github.com/Ting-YA-Yang/my-spec/issues"
-  },
-  "devDependencies": {
-    
   }
 }
